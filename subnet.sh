@@ -22,4 +22,4 @@ then
         ((max++))
 fi
 echo "172.$max.0.1"
-export SUBIP="172.$max.0.1"
+echo SUBIP="172.$max.0.1" > variable.properties
