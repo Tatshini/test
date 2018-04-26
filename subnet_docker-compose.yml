@@ -1,0 +1,18 @@
+version: '2.0'
+services:
+    vuejs:
+        build: .
+        container_name: jsfront
+        ports:
+            - "3020:8080"
+        volumes:
+            - /home/faizal/vue/my-project/:/home
+        networks:
+            - vuejs_net
+networks:
+    vuejs_net:
+        driver: bridge
+        ipam:
+          driver: default
+          config:
+            - subnet: $SUBIP/16
